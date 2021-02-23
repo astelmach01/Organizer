@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,8 +25,12 @@ public class Ask {
 
       }
     });
-    submitButton.addActionListener(e ->
-            userInput = Arrays.asList(submitButton.getText().split(",")));
+    submitButton.addActionListener(e -> {
+              userInput = Arrays.asList(textField.getText().split(","));
+    });
+
+
+
   }
 
   public JPanel contentPane() {
